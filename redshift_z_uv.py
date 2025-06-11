@@ -1,3 +1,5 @@
+import sys
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
@@ -147,6 +149,6 @@ def plot_redshift(distances, redshifts):
 
 if __name__ == "__main__":
     i = 0
-    image_path = "galaktyka.png"  # replace with your image
+    image_path = sys.argv[1]  # replace with your image
     distances, redshifts = animate_redshift(image_path)
     plot_redshift(distances, redshifts)
