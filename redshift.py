@@ -94,7 +94,7 @@ def redshift_image_spectral(img, z):
 
 def animate_redshift(img_path):
     original = Image.open(img_path)
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(10,10))
     ax.axis('off')
     im = ax.imshow(original)
 
@@ -122,7 +122,7 @@ def animate_redshift(img_path):
     return distances, redshifts
 
 def plot_redshift(distances, redshifts):
-    plt.figure(figsize=(8, 5))
+    plt.figure(figsize=(13, 10))
     plt.plot(distances, redshifts, 'r-')
     plt.xlabel("Distance (Mpc)")
     plt.ylabel("Redshift (z)")
